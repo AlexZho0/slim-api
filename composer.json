@@ -1,0 +1,25 @@
+{
+    "name": "alexzho0/slim-api",
+    "description": "slim4 custom api handler",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alex Zh",
+            "email": "oz.zhdaniuk@gmail.com"
+        }
+    ],
+    "require": {
+        "ext-json": "*",
+        "slim/slim": "^4.12",
+        "slim/psr7": "^1.6",
+        "vlucas/phpdotenv": "^5.5",
+        "spatie/array-to-xml": "^3.2",
+        "guzzlehttp/guzzle": "^7.0"
+    }
+}
