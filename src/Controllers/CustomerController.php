@@ -11,6 +11,7 @@ use GuzzleHttp\Client;
 
 class CustomerController
 {
+    const REQUEST_NUMBER = 10;
     private XmlRender $xml;
     private CustomerService $customerService;
 
@@ -30,7 +31,7 @@ class CustomerController
     public function getAllCustomers(Request $request, Response $response, $args): Response
     {
         $customers = [];
-        foreach ($this->customerService->getCustomers(2) as $item) {
+        foreach ($this->customerService->getCustomers(self::REQUEST_NUMBER) as $item) {
             $customers[] = $item->toArray();
         }
         usort($customers, new Comparator('last_name', 'desc'));

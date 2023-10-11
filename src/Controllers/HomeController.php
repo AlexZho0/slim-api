@@ -12,7 +12,7 @@ class HomeController
      * @param Response $response
      * @param mixed $args
      * 
-     * @return ResponseInterface
+     * @return Response
      */
     public function getHome(Request $request, Response $response, $args): Response
     {
